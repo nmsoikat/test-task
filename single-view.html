@@ -36,10 +36,10 @@
           </article>
         </div>
         <div class="col-md-4">
-          <a href="#!" class="video-preview">
+          <a href="#!" class="video-preview" id="playVideo">
             <figure class="video-preview__figure">
               <img src="https://picsum.photos/200" class="img-fluid" alt="">
-              <span class="play-btn"><i class="fas fa-play-circle"></i></span>
+              <span class="play-btn" id="playBtn"><i class="fas fa-play-circle"></i></span>
               <p class="preview-text">Preview This Course</p>
             </figure>
             <article class="video-preview__detail item-detail">
@@ -52,20 +52,86 @@
             </article>
           </a>
 
-          <!-- <video id="my-video" class="video-js" controls preload="auto" width="640" height="264"
-            poster="MY_VIDEO_POSTER.jpg" data-setup="{}">
-            <source src="./assets/video/placeholder-video.mp4" type="video/mp4" />
-            <p class="vjs-no-js">
-              To view this video please enable JavaScript, and consider upgrading to a
-              web browser that
-              <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-            </p>
-          </video> -->
-
         </div>
       </div>
     </div>
   </main>
+
+  
+  <div class="popup-video" id="popupWrap">
+    <div id="closeBtn"><i class="fas fa-window-close"></i></div>
+    <div class="popup-video__player">
+      <video id="my-video" class="video-js" controls preload="auto"
+        poster="MY_VIDEO_POSTER.jpg" data-setup="{}">
+        <source src="./assets/video/placeholder-video.mp4" type="video/mp4" />
+        <p class="vjs-no-js">
+          To view this video please enable JavaScript, and consider upgrading to a
+          web browser that
+          <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+        </p>
+      </video>
+    </div>
+
+    <div class="popup-video__playlist">
+      <div id="accordion">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Module 1
+              </button>
+            </h5>
+          </div>
+      
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="card-body">
+              <ul class="lecture-list">
+                <li class="lecture-list__item"><a href="#"> Lecture 1 </a></li>
+                <li class="lecture-list__item"><a href="#"> Lecture 2 </a></li>
+                <li class="lecture-list__item"><a href="#"> Lecture 3 </a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Module 2
+              </button>
+            </h5>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+            <div class="card-body">
+              <ul class="lecture-list">
+                <li class="lecture-list__item"><a href="#"> Lecture 1 </a></li>
+                <li class="lecture-list__item"><a href="#"> Lecture 2 </a></li>
+                <li class="lecture-list__item"><a href="#"> Lecture 3 </a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingThree">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Module 3
+              </button>
+            </h5>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+            <div class="card-body">
+              <ul class="lecture-list">
+                <li class="lecture-list__item"><a href="#"> Lecture 1 </a></li>
+                <li class="lecture-list__item"><a href="#"> Lecture 2 </a></li>
+                <li class="lecture-list__item"><a href="#"> Lecture 3 </a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="./assets/js/jQuery-v3.5.1 .js"></script>
   <script src="https://vjs.zencdn.net/7.10.2/video.min.js"></script>
