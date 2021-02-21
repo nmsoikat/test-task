@@ -1,0 +1,86 @@
+/* Large Device lg */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .popup-video{
+    width: 800px;
+    overflow: auto;
+    clear: both;
+  }
+  .popup-video__player{
+    width: 800px;
+  }
+
+  .popup-video__player div, 
+  .popup-video__player video{
+    width: 800px !important;
+  }
+  
+  .popup-video__playlist{
+    width: 100%;
+  }
+
+}
+
+/* Medium Device md */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+  .popup-video{
+    width: 600px;
+    overflow: auto;
+    clear: both;
+  }
+  .popup-video__player{
+    width: 600px;
+  }
+  .popup-video__player div, 
+  .popup-video__player video{
+    width: 600px;
+  }
+  
+  .popup-video__playlist{
+    float: left;
+    width: 100%
+  }
+
+}
+
+/* Medium To Extra Small Device */
+@media only screen and (max-width: 767px) {
+  .popup-video{
+    width: 90%;
+    overflow: auto;
+    clear: both;
+  }
+  .popup-video__player{
+    width: 90%;
+  }
+  /* .video-js .vjs-volume-panel,
+  .popup-video__player .vjs-control-bar, */
+
+  button[class*="vjs"],
+  div[class*="vjs"]{
+    width: auto;
+  }
+  
+  .popup-video__player div, 
+  .popup-video__player video{
+    width: 90%;
+  }
+
+
+  .popup-video__playlist{
+    float: left;
+    width: 100%
+  }
+
+}
+
+/* Small Device sm */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+
+}
+
+/* Extra Small device */
+@media only screen and (max-width: 575px) {
+  
+
+}
